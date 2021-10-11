@@ -1,0 +1,221 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+
+* {
+  font-family: sans-serif;
+}
+body {
+  margin: 0px auto;
+  padding: 0px;
+  background-color: rgb(230, 227, 227);
+}
+
+.content-header {
+  position: relative !important;
+  width: 100%;
+  height: 76px;
+  left: 0px;
+  top: 0px;
+  background: #fb772f;
+}
+
+.content-header .logo {
+  position: absolute;
+  float: left;
+  top: 18px;
+  left: 8px;
+  cursor: pointer;
+  width: 314px;
+  height: 39.89px;
+}
+
+.content-header ul {
+  top: 0.3rem;
+  width: 22%;
+  list-style: none;
+  float: right;
+  position: relative;
+  right: 63.5px;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.content-header ul li {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.menu-lateral {
+  position: absolute;
+  float: left;
+  background-color: #3a3532;
+  width: 108px;
+  left: 0px;
+  top: 75px;
+  height: 100%;
+}
+
+.menu-lateral ul {
+  margin: 0px auto;
+  float: left;
+  height: 99%;
+  padding: 0;
+}
+.menu-lateral ul a {
+  text-decoration: none;
+}
+.menu-lateral ul li {
+  margin: 0px auto;
+  list-style: none;
+  padding: 0px;
+  padding-top: 5px;
+  border-top: solid 1px rgb(161, 161, 161);
+  border-bottom: solid 1px rgb(161, 161, 161);
+  text-align: center;
+  line-height: 30px;
+}
+
+.menu-lateral ul li:hover {
+  background-color: #635a55;
+}
+
+.menu-lateral ul li i {
+  font-size: 3rem;
+  color: white;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+.menu-lateral ul li span {
+  color: #f18c56;
+}
+
+.container {
+  margin: 0px auto;
+  padding: 0px;
+  background-color: white;
+  position: absolute;
+  left: 174px;
+  top: 135px;
+  width: 79%;
+  height: 70%;
+  box-shadow: 1px 1px 4px rgb(0 0 0 / 25%);
+}
+
+.container h2 {
+  color: #fb772f;
+  border-bottom: solid 2px #fb772f;
+  padding: 1rem;
+  width: 89.7%;
+  border: 0px auto;
+  border-right: 5px !important;
+  display: inline;
+  position: absolute;
+  left: 25px;
+}
+.container p {
+  position: absolute;
+  top: 70px;
+  padding: 1.5rem;
+  line-height: 30px;
+}
+
+.calculadora {
+  position: absolute;
+  top: 120px;
+  padding: 1.5rem;
+  height: 50%;
+  width: 70%;
+  border: rgb(53, 49, 49) 0.1rem solid;
+  border-radius: 0.5rem;
+  left: 8rem;
+  display: inline-block;
+  background-color: rgb(248, 248, 248);
+}
+.screen {
+  width: 96%;
+  text-align: right;
+  height: 30px;
+  font-size: 1.5rem;
+  color: black;
+  border: #fb772f solid 0.01rem;
+  border-radius: 0.2rem;
+}
+
+buttons {
+  display: inline-block;
+  padding: 0.2rem;
+  width: 95%;
+}
+
+.line-one {
+  padding-top: 1rem;
+  height: 2rem;
+}
+.line-one button {
+  width: 23.6%;
+  height: 2rem;
+}
+.line-two {
+  padding-top: 0.5rem;
+  height: 2rem;
+}
+.line-two button {
+  width: 23.6%;
+  height: 2rem;
+}
+
+.line-tree {
+  padding-top: 0.5rem;
+  height: 2rem;
+}
+.line-tree button {
+  width: 23.6%;
+  height: 2rem;
+}
+.line-four {
+  padding-top: 0.5rem;
+  height: 2rem;
+}
+.line-four button {
+  width: 23.6%;
+  height: 2rem;
+}
+.line-last {
+  padding-top: 0.5rem;
+  height: 2rem;
+}
+.line-last button {
+  width: 23.6%;
+  height: 2rem;
+}
+.line-last .equal {
+  width: 47.9%;
+  height: 2rem;
+}
+
+.buttons button {
+  border: solid #fb772f 0.01rem;
+  border-radius: 5px;
+  background-color: #f18c56;
+  color: aliceblue;
+}
+.buttons button:hover {
+  background-color: #f3a276;
+}
+
+footer {
+  position: relative;
+  top: 37rem;
+  float: right;
+  height: 4rem;
+  background-color: #201c1c;
+  color: white;
+  width: 92%;
+  text-align: center;
+}
+footer .direitos {
+  position: absolute;
+  top: 1.4rem;
+  left: 34rem;
+  align-content: center;
+}
