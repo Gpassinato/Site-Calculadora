@@ -31,15 +31,22 @@ var FinalResult = ""
     case "x":
         FinalResult = parseFloat(PrevNumber) * parseFloat(CurrentNumber)
     break
-    case "/":
+    case "÷":
         FinalResult = parseFloat(PrevNumber) / parseFloat(CurrentNumber)
     break
     }
-PrevNumber = ""
-CurrentNumber = ""
-Operator = ""
-ScreenShow(FinalResult,"","")
-console.log("A conta de " + PrevNumber + Operator + CurrentNumber + " é igual: " + FinalResult)
+    
+    //Trava para o usuario não selecionar um operador sem ter selecionado todos os numeros
+    if(PrevNumber === "" || CurrentNumber === "") {
+        ScreenShow("", "", "")
+        return AllClear()
+    }
+
+    ScreenShow(FinalResult,"","")
+    console.log("A conta de " + PrevNumber + Operator + CurrentNumber + " é igual: " + CurrentNumber)
+    PrevNumber = ""
+    CurrentNumber = parseFloat(FinalResult)
+    Operator = ""
 }
 
 //Seleção dos numeros
@@ -55,13 +62,17 @@ NumberButtons.forEach(button => {
 //Seleção das Operaçoes
 OperatorButtons.forEach(button => {
     button.addEventListener('click', () =>{
-                  Operator = button.innerHTML
-                  PrevNumber = CurrentNumber
-                  CurrentNumber = ""
-                  if(PrevNumber === ""){
+                if(Operator === ""){
+                Operator = button.innerHTML
+                PrevNumber = CurrentNumber
+                CurrentNumber = ""}
+                if(PrevNumber === ""){
                     Operator = ""
-                  } 
+                    return
+                } 
+                
        ScreenShow(PrevNumber, Operator, CurrentNumber)
+       console.log("O operador selecionado é: " + Operator)
     })
 })
 
