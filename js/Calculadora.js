@@ -1,13 +1,14 @@
 var CurrentNumber = '', PrevNumber = '', Operator = '';
 var NumberButtons = document.querySelectorAll(".number")
 var OperatorButtons = document.querySelectorAll(".operation")
-var Screen = document.querySelector(".screen")
+var Display = document.querySelector(".screen")
 var AC = document.querySelector(".clear")
+var Delete = document.querySelector(".del")
 var Equal = document.querySelector(".equal")
 
 //Função para atualizar o que aparece na tela
 function ScreenShow (FristNumberToShow, Operator, LastNumberToShow){ 
-    Screen.textContent = FristNumberToShow + " " + Operator + " " + LastNumberToShow
+    Display.textContent = FristNumberToShow + " " + Operator + " " + LastNumberToShow
     }
 
 //Função para Limpar tudo
@@ -20,20 +21,24 @@ function AllClear (){
 
 //Função de calculo
 function Calculation(){
-var FinalResult = ""
+    var FinalResult = ""
+    
     switch(Operator) {
-    case "+":
-        FinalResult = parseFloat(PrevNumber) + parseFloat(CurrentNumber)
-    break
-    case "-":
-        FinalResult = parseFloat(PrevNumber) - parseFloat(CurrentNumber)
-    break
-    case "x":
-        FinalResult = parseFloat(PrevNumber) * parseFloat(CurrentNumber)
-    break
-    case "÷":
-        FinalResult = parseFloat(PrevNumber) / parseFloat(CurrentNumber)
-    break
+        case "+":
+            FinalResult = parseFloat(PrevNumber) + parseFloat(CurrentNumber)
+        break
+        case "-":
+            FinalResult = parseFloat(PrevNumber) - parseFloat(CurrentNumber)
+        break
+        case "x":
+            FinalResult = parseFloat(PrevNumber) * parseFloat(CurrentNumber)
+        break
+        case "÷":
+            FinalResult = parseFloat(PrevNumber) / parseFloat(CurrentNumber)
+        break
+        case "^":
+            FinalResult = Math.pow(PrevNumber, CurrentNumber)
+        break
     }
     
     //Trava para o usuario não selecionar um operador sem ter selecionado todos os numeros
@@ -42,11 +47,28 @@ var FinalResult = ""
         return AllClear()
     }
 
-    ScreenShow(FinalResult,"","")
-    console.log("A conta de " + PrevNumber + Operator + CurrentNumber + " é igual: " + CurrentNumber)
+    ScreenShow(FinalResult.toFixed(2),"","")
+    console.log("A conta de " + PrevNumber + Operator + CurrentNumber + " é igual: " + FinalResult)
     PrevNumber = ""
     CurrentNumber = parseFloat(FinalResult)
     Operator = ""
+}
+
+//Função del (apaga o ultimo caractere)
+function Del(){
+    
+    if(PrevNumber === "" && CurrentNumber != ""){
+        CurrentNumber = CurrentNumber.substring(0, CurrentNumber.length - 1 )
+    }
+    if(CurrentNumber != "" && Operator != ""){
+         CurrentNumber = CurrentNumber.substring(0, CurrentNumber.length - 1 )
+    }
+    else if ( CurrentNumber.length === 0 && Operator != ""){
+         Operator = ""
+         CurrentNumber = PrevNumber;
+         PrevNumber = ""
+     }
+     return ScreenShow(PrevNumber ,Operator , CurrentNumber)
 }
 
 //Seleção dos numeros
@@ -76,7 +98,7 @@ OperatorButtons.forEach(button => {
     })
 })
 
-//Calculo
+//Fazer o Calculo
 Equal.addEventListener('click', () =>{
     Calculation();
 })
@@ -84,4 +106,9 @@ Equal.addEventListener('click', () =>{
 //Limpar Numeros
 AC.addEventListener('click', () =>{
     AllClear()
+})
+
+//Deletar o ultimo caractere
+Delete.addEventListener('click', () => {
+    Del();
 })
