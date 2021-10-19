@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./CSS/main.CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./CSS/Cronometro.CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="shortcut icon" type="imagex/png" href="./img/calculator-icon.ico">
-    <title>Pass Calcualtor</title>
+    <title>Cronometro | Pass Calcualtor</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
    </header>
  <div class= "menu-lateral">
         <ul class="icones-ferramentas">
-            <a href="file:///C:/Users/Gabriel/Desktop/1%C2%BA%20Projeto/Site%20com%20calculadoras-layot%202/calculadora.html">
+            <a href="#">
                  <li>
                  <i class="fas fa-calculator"></i>
                     <span>Calculadora</span>
@@ -44,32 +45,35 @@
         </ul>
     </div>   
 <div class="container">
-    <h2>Bem-Vindo!</h2>
-    <p>Aqui você encontra uma variedade de calculadoras gratuitas para diversas fomas de cálculos. Encontre também diversos conversores de unidades (volume, peso e massa, coomprimento, etc), conversosr de moedas, calculadora de datas e muito mais.<br>
-    Para experimentar selecione uma das opções listadas abaixo</p>
-    <div class="barra-separacao"></div>
-    <div class = "icones">
-        <a> 
-            <i class="fas fa-calculator"></i>
-            <br><span>Calculadora</span>
-        </a>
-        <a>
-            <i class="fas fa-balance-scale-right"></i>
-            <br><span>Conversor</span>
-        </a>
-        <a>
-            <i class="fas fa-stopwatch"></i> 
-            <br><span>Cronometro</span>
-        </a>
-    </div>
-    
+    <div class="Cronometro">
+        <div class="text">
+            <h2>Cronometro</h2>
+        </div>
+        <div class=timer-container>
+            <div class=timer>00:00:000</div>
+        </div>
+        <div class=button-container>
+            <button class="buttons">Iniciar</button>
+            <button class="buttons">Parar</button>
+            <button class="buttons">Volta</button>
+            <button class="buttons">Redefinir</button>
+        </div>
+        <div class="volta-container">
+            <div class="laptitle">Volta</div>
+            <div class="laptitle">Tempo da volta</div>
+            <div class="laptitle">Tempo Total</th></div>
+            <div class="voltas"></div>
+            <div class="tempo"></div>
+            <div class="tempo-total"></div>
+        </div>
+    </div>   
+
 </div>
 
 <footer>
-    <div class="direitos">Contato  |   © 2021 </div>
-
+    <div class="direitos"> Contato  |   © 2021 </div>
 </footer>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/Cronometro.js"></script>
 </body>
 
 </html>

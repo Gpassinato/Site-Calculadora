@@ -1,0 +1,200 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 10vh 85vh 5vh/0.3fr 3fr;
+  background-color: rgb(230, 227, 227);
+  grid-template-areas:
+    "header header"
+    "menu  content"
+    "menu footer";
+}
+
+header {
+  background-color: #fb772f;
+  grid-area: header;
+}
+
+.content-header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-header .logo {
+  justify-content: start;
+  align-content: center;
+  cursor: pointer;
+  width: 19.625rem;
+  height: 2.493rem;
+}
+
+.content-header ul {
+  width: 22%;
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.content-header ul li {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.menu-lateral {
+  background-color: #3a3532;
+  grid-area: menu;
+  display: flex;
+}
+
+.menu-lateral ul {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral ul a {
+  text-decoration: none;
+}
+
+.menu-lateral ul li {
+  margin: 0px auto;
+  list-style: none;
+  padding: 0px;
+  padding-top: 5px;
+  border-top: solid 1px rgb(161, 161, 161);
+  border-bottom: solid 1px rgb(161, 161, 161);
+  text-align: center;
+  line-height: 30px;
+}
+
+.menu-lateral ul li:hover {
+  background-color: #635a55;
+}
+
+.menu-lateral ul li i {
+  font-size: 3rem;
+  color: white;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+.menu-lateral ul li span {
+  color: #f18c56;
+}
+
+.container {
+  grid-area: content;
+  margin: 2rem;
+  background-color: white;
+  display: flex;
+}
+.Cronometro {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 10vh 45vh 20vh/ 2fr 1fr;
+  grid-template-areas:
+    "text text"
+    "timer volta"
+    "button volta";
+}
+.container .text {
+  grid-area: text;
+  height: 100%;
+  width: 96.5%;
+  border-bottom: solid 2px #fb772f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.container h2 {
+  color: #fb772f;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+.timer-container {
+  grid-area: timer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.timer {
+  font-size: 10rem;
+}
+.button-container {
+  grid-area: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.buttons {
+  text-align: center;
+  width: 20%;
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid 1px #fb772f;
+  border-radius: 0.2rem;
+  background-color: #fb772f;
+  color: white;
+  cursor: pointer;
+}
+.buttons:hover {
+  background-color: #f89058;
+}
+.volta-container {
+  grid-area: volta;
+  display: grid;
+  grid-template: 0.5fr 2fr/ 1fr 1fr 1fr;
+  height: 100%;
+  width: 93%;
+  font-size: 1.5rem;
+  overflow: scroll;
+}
+.laptitle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.tempo {
+  margin: 0px auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.voltas {
+  margin: 0px auto;
+  padding: 5px;
+}
+
+.tempo-total {
+  margin: 0px auto;
+  text-align: center;
+  padding: 5px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #201c1c;
+}
+.direitos {
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
